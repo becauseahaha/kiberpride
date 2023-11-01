@@ -1,0 +1,58 @@
+.header
+    position: absolute
+    padding-top: 78px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 2
+    width: 100%
+    // padding-left: 125px
+    // padding-right: 125px
+    // max-width: calc(1580px + 250px)
+    &__nav
+        display: flex
+        justify-content: space-between
+
+        &-wrapper 
+            display: flex
+            flex-grow: 1
+            max-width: 30%
+            justify-content: space-between
+            height: 58px
+            &-left
+                .header__nav-link
+                    margin-right: 30px
+                    &:nth-child(1)
+                        transform: rotate(9deg)
+                    &:nth-child(2)
+                        transform: rotate(6deg)
+                        align-self: center
+                    &:nth-child(3)
+                        transform: rotate(3deg)
+                        align-self: flex-end
+            &-right
+                .header__nav-link
+                    margin-left: 30px
+                    &:nth-child(3)
+                        transform: rotate(-9deg)
+                    &:nth-child(2)
+                        transform: rotate(-6deg)
+                        align-self: center
+                    &:nth-child(1)
+                        transform: rotate(-3deg)
+                        align-self: flex-end
+        &-link
+            font-size: 0.9375rem
+            font-weight: 700
+            line-height: 118.5%
+            letter-spacing: 0.04688rem
+            text-transform: uppercase
+            white-space: nowrap
+            &:hover
+                font-weight: 800
+                
+
+    &__logo
+        position: absolute
+        left: 50%
+        top: 11px
+        transform: translateX(-50%)

@@ -1,0 +1,58 @@
+.popup
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	overflow-y: scroll
+	display: flex
+	justify-content: center
+	align-items: center
+	z-index: 30
+	opacity: 0
+	visibility: hidden
+	transition: visibility .3s, opacity .3s
+	+bp(768px, min)
+		padding: 40px
+	&.is-show
+		visibility: visible
+		opacity: 1
+	&__overlay
+		position: fixed
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		z-index: 2
+		opacity: 0.9
+		background: #1E1E1E
+	&__inner
+		position: relative
+		z-index: 3
+		margin: auto 0
+		width: 100%
+		max-width: 1300px
+		background-color: #fff
+	&__close
+		position: fixed
+		width: 32px
+		height: 32px
+		right: 10px
+		top: 10px
+		border-radius: 50%
+		background-image: url('../images/popup-closer.svg')
+		background-position: center
+		background-repeat: no-repeat
+		background-size: 10px 10px
+		backdrop-filter: blur(2px)
+		cursor: pointer
+		@at-root ._red &
+			background-image: url('../images/closer-red.svg')
+			border-color: #C41A32
+		+bp(768px, min)
+			position: absolute
+			width: 36px
+			height: 36px
+			right: 25px
+			top: 25px
+			border: 1px solid #1E1E1E

@@ -1,0 +1,369 @@
+.franchise
+
+.franchise-header
+    width: 100%
+    max-height: 100vh
+    aspect-ratio: 16/9
+    padding-top: 310px
+
+    &__main-image
+        position: absolute
+        top: 0
+        left: 0
+        background:  lightgray 50% / cover no-repeat
+        width: 100%
+        height: 100%
+        max-height: 100vh
+        z-index: -1
+        &::before
+            position: absolute
+            content: ""
+            display: block
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            background: linear-gradient(359deg, rgba(2, 1, 96, 0.76) 3.63%, rgba(2, 1, 96, 0.00) 45.82%), 
+            linear-gradient(90deg, #020160 0.14%, rgba(2, 1, 96, 0.88) 19.11%, rgba(2, 1, 96, 0.76) 40.32%, rgba(2, 1, 96, 0.00) 59.88%)
+            background-blend-mode: normal, normal
+            z-index: 1
+
+    &__content
+        position: relative
+        max-width: 810px
+        height: 100%
+    &__title
+        margin-bottom: 43px
+        span
+            white-space: nowrap
+    &__benefits
+        margin-bottom: 56px
+    &__benefits-item
+        margin-bottom: 30px
+        &-icon
+            margin-right: 20px
+
+    +bp(1280px)
+        padding-bottom: 60px
+        aspect-ratio: unset
+        &__title
+            margin-bottom: 26px
+
+
+.franchise-video
+    padding-top: 170px
+    padding-bottom: 165px
+    &__title
+        text-align: center
+        margin-bottom: 50px
+    &__video
+        aspect-ratio: 16 / 8
+        width: 100%
+        max-height: 800px
+        margin-bottom: 65px
+    &__stats
+        display: flex
+        justify-content: space-between
+        &-item
+            line-height: 1.3
+            text-align: center
+        &-number
+            font-size: 6.25rem
+            color: $yellow
+            font-weight: 900
+            letter-spacing: 0.3125rem
+        &-description
+            font-size: 1.5rem
+            letter-spacing: 0.045rem
+    +bp(1280px)
+        padding-bottom: 100px
+        &__title
+            margin-bottom: 40px
+        &__video
+            margin-bottom: 50px
+        &__stats
+            &-number
+                font-size: 4.6875rem
+                letter-spacing: -0.14063rem
+
+.franchise-advantages
+    padding-top: 170px
+    padding-bottom: 125px
+    &__title
+        text-align: center
+        margin-bottom: 20px
+    &__description
+        max-width: 1150px
+        margin-bottom: 100px
+        margin-left: auto
+        margin-right: auto
+        text-align: center
+        line-height: 1.3
+        font-size: 1.5rem
+        font-weight: 500
+    &__advantages
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: 1fr
+        gap: 20px
+        margin-bottom: 70px
+    &__btn-box
+        display: flex
+        justify-content: center
+    +bp(1280px)
+        padding-top: 100px
+        padding-bottom: 100px
+        &__advantages
+            margin-bottom: 35px
+
+.advantages
+    &__item
+        padding: 55px 50px 85px
+        background-color: $blue-4
+        display: flex
+        flex-direction: column
+        &:nth-child(even)
+            background-color: $blue-3
+            .advantages__num
+                color: $blue-3
+    &__num
+        font-size: 4.375rem
+        letter-spacing: 0.21875rem
+        font-weight: 600
+        text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff
+        color: $blue-4
+        margin-bottom: 85px
+    &__title
+        font-weight: 800
+        letter-spacing: -0.01688rem
+        line-height: 1.18
+        text-transform: uppercase
+        margin-bottom: 30px
+    &__description
+        line-height: 1.4
+        letter-spacing: 0.03375rem
+    +bp(1280px)
+        &__item
+            padding: 30px 30px 40px
+        &__num
+            margin-bottom: 69px
+        &__title
+            margin-bottom: 24px
+
+
+.franchise-reviews
+    padding-top: 165px
+    padding-bottom: 180px
+    position: relative
+    &__title
+        text-align: center
+        margin-bottom: 84px
+    &__swiper-wrapper 
+        display: flex
+        gap: 45px
+        &::after
+            position: absolute
+            content: ""
+            display: block
+            width: 610px
+            height: 355px
+            right: 0
+            bottom: 180px
+            background: linear-gradient(270deg, rgba(2, 1, 96, 0.76) 60.86%, rgba(2, 1, 96, 0.00) 77.08%)
+        .video
+            flex: 0 0 610px
+            height: 355px
+    &__controls-left,
+    &__controls-right
+        position: absolute
+        padding: 0 45px
+        transform: translateY(-218px)
+    &__controls-left
+        left: 0
+    &__controls-right
+        right: 0
+
+    +bp(1280px)
+        padding-top: 100px
+        padding-bottom: 185px
+        &__title
+            margin-bottom: 40px
+        &__swiper-wrapper 
+            gap: 27px
+            &::after
+                display: none
+            .video
+                flex-basis: 547px
+                height: 318px
+        &__controls-left,
+        &__controls-right
+            transform: translate(-60px, 35px)
+            padding: 0
+            left: 50%
+            right: unset
+            .btn
+                width: 50px
+                height: 50px
+        &__controls-right
+            transform: translate(10px, 35px)
+
+.franchise-income
+    padding-top: 100px
+    padding-bottom: 160px
+    &__title
+        margin-bottom: 40px
+    &__content
+        display: flex
+        &-left
+            max-width: 800px 
+        &-right 
+            position: relative
+            flex: 1 1 780px
+            img
+                position: absolute
+                bottom: -100px
+                right: 0
+                display: block
+                width: 100%
+    &__list-wrapper 
+        padding: 60px 50px 60px 35px
+        background-color: $blue-4
+        clip-path: polygon(0px 2%, 98% 0px, 100% 100%, 0px 99%)
+    &__summary
+        margin-top: 44px
+        padding: 20px 60px 25px 35px
+        background-color: #6A37C4
+        clip-path: polygon(0% 1%, 100% 0%, 98% 100%, 0% 99%)
+        .franchise-income__list
+            font-size: 1.25rem
+            letter-spacing: 0.0625rem
+            font-weight: 800
+            &-item
+                padding: 15px 0
+                border-bottom-color: #8988FF
+    &__list
+        font-weight: 800
+        letter-spacing: -0.01688rem
+        line-height: 1.185
+        text-transform: uppercase
+        &_offset
+            margin-left: 15px
+            margin-right: 50px
+        &-item
+            display: flex
+            justify-content: space-between
+            padding: 18px 0
+            border-bottom: 1px dashed #7978FF
+            &:last-child
+                border-bottom: none
+            &-description
+                padding-right: 40px
+            &-sum
+                flex: 0 0 auto
+
+    +bp(1280px)
+        padding-bottom: 110px
+        &__content
+            &-right
+                flex-basis: 55% 
+                img
+                    bottom: 0
+                    right: unset
+                    left: -50px
+        &__list-wrapper 
+            padding-left: 25px
+            padding-right: 37px
+
+.franchise-benefits
+    padding-top: 155px
+    padding-bottom: 155px
+    &__title
+        margin-left: auto
+        margin-right: auto
+        max-width: 1150px
+        text-align: center
+        margin-bottom: 95px
+    &__list
+        display: grid
+        justify-content: space-between
+        grid-template-columns: repeat(3, 400px)
+        grid-template-rows: 1fr
+        row-gap: 100px
+    &__list-item
+        text-align: center
+        &-icon
+            margin-bottom: 25px
+        &-description
+            font-size: 1.5rem
+            line-height: 1.3
+
+    +bp(1280px)
+        &__title
+            .text-yellow
+                white-space: nowrap
+        &__list
+            grid-template-columns: repeat(3, 280px)
+            row-gap: 55px
+        &__list-item
+            &-description
+                font-size: 1.125rem
+                letter-spacing: 0.03375rem
+
+
+.franchise-join-us
+    padding-top: 170px
+    padding-bottom: 135px
+    position: relative
+    &__lion
+        position: absolute
+        bottom: 138px
+        left: 50%
+        transform: translateX(-105%)
+        display: block
+        width: 650px
+        z-index: 1
+    &__content
+        display: flex
+        background-color: $blue-3
+        clip-path: polygon(2% 0%, 100% 1%, 100% 97%, 0% 100%)
+        padding-top: 90px
+        padding-bottom: 85px
+        padding-right: 174px
+        gap: 80px
+    &__content-left
+        flex: 1 0 650px
+    &__content-right
+        max-width: 615px
+    &__title
+        margin-bottom: 45px
+    &__contacts
+        font-size: 1.5rem
+        letter-spacing: 0.045rem
+        line-height: 1.3
+        &-description
+            margin-bottom: 47px
+        &-phone
+            margin-bottom: 23px
+        &-mail
+            margin-bottom: 47px
+
+    +bp(1280px)
+        padding-top: 135px
+        padding-bottom: 66px
+        &__lion
+            width: 490px
+            bottom: 67px
+        &__content
+            gap: 0
+            padding-top: 68px
+            padding-bottom: 50px
+            padding-right: 50px
+        &__content-left
+            flex-basis: 540px
+        &__title
+            margin-bottom: 25px
+        &__contacts
+            &-description
+                margin-bottom: 35px
+            &-mail
+                margin-bottom: 42px

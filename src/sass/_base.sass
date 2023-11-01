@@ -1,0 +1,87 @@
+*
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+	-moz-tap-highlight-color: rgba(0, 0, 0, 0)
+	box-sizing: border-box
+
+*::before,
+*::after
+	box-sizing: inherit
+	
+
+html, :root
+	font-size: $baseRem
+	overflow-x: hidden
+	color-scheme: dark
+
+	+bp(1024px)
+		-webkit-text-size-adjust: 100%
+
+body
+	font-family: $baseFont
+	font-size: 1.125rem
+	letter-spacing: 0.03375rem
+	font-weight: 500
+	color: $baseTxt
+	min-width: 320px
+	padding: 0
+	margin: 0
+	overflow-x: hidden
+	text-rendering: geometricPrecision
+	background-color: #050436
+	+bp(1280px)
+		font-size: 1rem
+		letter-spacing: 0.03rem
+
+.page
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	width: 100%
+	position: relative 
+	z-index: 2
+
+.main
+	flex-grow: 1
+	display: flex
+	flex-direction: column
+
+img
+	max-width: 100%
+
+.container
+	width: 100%
+	max-width: 1668px
+	margin: 0 auto
+	padding: 0 34px
+	box-sizing: border-box
+	+bp(1280px)
+		max-width: 1280px
+		padding: 0 70px
+
+
+.wrapper
+	width: 100%
+	max-width: $content-wrapper-width + ($content-wrapper-gap * 2)
+	padding: 0 $content-wrapper-gap
+	margin: 0 auto
+
+	&--large 
+		max-width: 100%
+
+	&--small
+		max-width: $content-wrapper-width-small + ($content-wrapper-gap * 2)
+
+	+bp($bp-large2)
+		padding: 0 40px
+
+	+bp($bp-small2)
+		padding: 0 20px
+
+.icon
+	width: 36px
+	height: 36px
+	background-repeat: no-repeat
+	background-size: contain
+	color: $orange
+	&:hover
+		color: $orange-hover

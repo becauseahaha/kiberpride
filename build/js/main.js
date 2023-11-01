@@ -1,0 +1,2 @@
+!function(){"use strict";document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".js-header"),s=document.querySelector(".js-header-burger"),t=document.querySelector(".js-header-closer");window.addEventListener("scroll",function(){window.scrollY>10?e.classList.add("_scrolled"):e.classList.remove("_scrolled")}),s.addEventListener("click",function(){e.classList.add("_visible")}),t.addEventListener("click",function(){e.classList.remove("_visible")})})}();
+//# sourceMappingURL=main.js.map

@@ -1,0 +1,24 @@
+.logo
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 6px
+    &__shield
+        width: 68px
+        height: 108px
+        background-image: url(../images/logo-shield.png)
+        background-size: contain
+        background-repeat: no-repeat
+        +retina()
+            background-image: url(../images/logo-shield@2x.png)
+    &__text-wrapper
+        width: 131.5px
+        height: 16.7px
+        display: flex
+        align-items: center
+    &__left
+        margin-right: -6.1%
+        z-index: 1
+    &__right
+        margin-left: -6.1%
+        z-index: 0

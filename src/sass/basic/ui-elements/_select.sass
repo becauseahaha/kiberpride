@@ -1,0 +1,59 @@
+.custom-select-container
+    z-index: 4
+
+.custom-select-opener
+    background-color: #fff
+    border: 1px solid #C41A32
+    border-bottom: none
+    padding: 9px 16px
+    color: #C41A32;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 15.6px */
+    text-transform: uppercase;
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &::after
+        content: ''
+        display: inline-block
+        margin-left: 14px
+        width: 10px
+        height: 5px
+        background-image: url('../images/select-arr.svg')
+        background-size: cover
+        background-position: center
+        transition: transform .3s
+
+        @at-root .is-open &
+            transform: rotate(180deg)
+
+.custom-select-option
+    background-color: #fff
+    padding: 9px 16px
+    color: #C41A32;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 15.6px */
+    text-transform: uppercase;
+    display: flex
+    align-items: center
+    cursor: pointer
+
+.custom-select-panel
+    border-bottom: 1px solid #C41A32
+    border-left: 1px solid #C41A32
+    border-right: 1px solid #C41A32
+
+.custom-select-option.is-selected:before
+    display: none
+
+.custom-select-container.is-open .custom-select-panel
+    overflow: hidden
+
+.custom-select-option.has-focus
+    background-color: rgba(#C41A32, 0.1)

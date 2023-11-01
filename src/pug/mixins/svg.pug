@@ -1,0 +1,7 @@
+mixin svg(name)
+	svg&attributes(attributes)
+		use(xlink:href=`images/sprites.svg#${name}`)
+
+mixin icon(name)
+	svg.icon&attributes(attributes)
+		use(href=`#${name}`)

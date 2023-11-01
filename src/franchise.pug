@@ -1,0 +1,206 @@
+extends pug/base
+include components/video/video
+include components/buttons/buttons
+
+append vars
+	- title = 'Франшиза'
+
+block content
+
+	.franchise
+		section.franchise-header
+			.franchise-header__main-image(style="background-image:url(../images/main-franchise.jpg)")
+			.container
+				.franchise-header__content
+					h1.franchise-header__title.title
+						| Франшиза 
+						span.text-yellow кибер Pride <br> 
+						| в твоем городе
+
+					.franchise-header__benefits
+						.franchise-header__benefits-item
+							+img('icon-1.svg').franchise-header__benefits-item-icon   
+							| Эффективная бизнес-модель
+						.franchise-header__benefits-item
+							+img('icon-2.svg').franchise-header__benefits-item-icon  
+							| Раскачаем с 0 до 1 млн. выручки
+						.franchise-header__benefits-item
+							+img('icon-3.svg').franchise-header__benefits-item-icon  
+							| Сильное комьюнити из 119 партнера
+
+					.franchise-header__btn-box
+						+button('Получить консультацию')(class="franchise-header__btn")
+
+		section.franchise-video 
+			.container
+				h2.franchise-video__title.title
+					| Посмотри видео и узнай все 
+					br 
+					| о франшизе 
+					span.text-yellow кибер Pride 
+				.franchise-video__video
+					+video({
+						class: 'video-full',
+						link: '#', 
+						img: 'video.jpg'
+					})
+				.franchise-video__stats 
+					.franchise-video__stats-item 
+						.franchise-video__stats-number 11
+						.franchise-video__stats-description стран
+					.franchise-video__stats-item 
+						.franchise-video__stats-number 190
+						.franchise-video__stats-description клубов
+					.franchise-video__stats-item 
+						.franchise-video__stats-number 400 000
+						.franchise-video__stats-description клиентов ежемесячно
+					.franchise-video__stats-item 
+						.franchise-video__stats-number 4 800+
+						.franchise-video__stats-description персональных компьютеров
+
+		section.franchise-advantages.bg-blue
+			.container
+				h2.franchise-advantages__title.title
+					| преимущества франшизы 
+					span.text-yellow кибер Pride 
+				p.franchise-advantages__description У нас налаженная система сопровождения на всех этапах работы: от поиска локации до проведения международных турниров.
+				.franchise-advantages__advantages.advantages
+					.advantages__item
+						.advantages__num 01
+						.advantages__title Экономия более 1 400 000₽ на этапе открытия
+						p.advantages__description Собственное производство мебели, рекламных конструкций и сборки ПК создает дополнительную экономию. А кроме того, наши партнёры приобретают технику на 12-15% дешевле конкурентов, получая самые низкие цены в отрасли.
+					.advantages__item
+						.advantages__num 02
+						.advantages__title Доступ к международным турнирам кибер pride
+						p.advantages__description К концу 2021 года клубы КиберPride охватывают уже 9 стран. Мы регулярно проводим киберспортивные чемпионаты в призовым фондом более 1 млн рублей.
+					.advantages__item
+						.advantages__num 03
+						.advantages__title Бесплатное обучение в академии кибер pride
+						p.advantages__description Каждый наш партнер проходит бесплатное обучение собственника киберспортивного клуба УК КиберPride. Кроме того, еженедельно мы проводим образовательные вебинары для линейного персонала клубов.
+					.advantages__item
+						.advantages__num 04
+						.advantages__title Источники дополнительного дохода
+						p.advantages__description Помимо выручки от игрового времени и бара, собственники клубов получают дополнительный доход от: рекламных отчислений спонсоров, реализации кастомизированного мерча КиберPride, корпоративных мероприятий и киберспортивных турниров.
+					.advantages__item
+						.advantages__num 05
+						.advantages__title Локальный и общесетевой маркетинг
+						p.advantages__description Мы создаем маркетинговый план для каждого партнера. Вы получаете полностью упакованную методику по успешному запуску киберспортивной арены, которая позволит создать лояльную аудиторию с самого открытия. 
+					.advantages__item
+						.advantages__num 06
+						.advantages__title Выезд команды кибер pride на открытие клуба
+						p.advantages__description Наши специалисты проверяют готовность клуба, настраивают игры, ПО компьютеров, проводят полное обучение команды и делают фотоотчет.
+
+				.franchise-advantages__btn-box
+					+button('Получить консультацию')(class="franchise-advantages__btn")
+
+		section.franchise-reviews
+			.container
+				h2.franchise-reviews__title.title
+					| Отзывы о франшизе 
+					span.text-yellow кибер Pride 
+				.franchise-reviews__swiper 
+					.franchise-reviews__swiper-wrapper 
+						+video({
+							link: '#', 
+							img: 'video-1.jpg'
+						})
+						+video({
+							link: '#', 
+							img: 'video-2.jpg'
+						})
+						+video({
+							link: '#', 
+							img: 'video-3.jpg'
+						})
+				.franchise-reviews__controls-left: +button-prev(true)
+				.franchise-reviews__controls-right: +button-next(true)
+
+		section.franchise-income.bg-blue
+			.container
+				.franchise-income__content 
+					.franchise-income__content-left
+						h2.franchise-income__title.title
+							| Доход от франшизы 
+							span.text-yellow кибер Pride 
+						.franchise-income__list-wrapper 
+							ul.franchise-income__list.franchise-income__list_offset
+								li.franchise-income__list-item
+									.franchise-income__list-item-description Аренда игрового оборудования
+									.franchise-income__list-item-sum 710 000₽
+								li.franchise-income__list-item
+									.franchise-income__list-item-description Продажа напитков и еды
+									.franchise-income__list-item-sum 230 000₽
+								li.franchise-income__list-item
+									.franchise-income__list-item-description Проведение киберспортивных ивентов
+									.franchise-income__list-item-sum 70 000₽
+								li.franchise-income__list-item
+									.franchise-income__list-item-description Рекламные интеграции с партнерами и спонсорами
+									.franchise-income__list-item-sum 26 000₽
+								li.franchise-income__list-item
+									.franchise-income__list-item-description Проведение корпоративных мероприятий
+									.franchise-income__list-item-sum 17 000₽
+								li.franchise-income__list-item
+									.franchise-income__list-item-description Доля от побед команды клуба на киберспортивных чемпионатах
+									.franchise-income__list-item-sum 25 000₽
+							.franchise-income__summary
+								ul.franchise-income__list
+									li.franchise-income__list-item
+										.franchise-income__list-item-description Чистая прибыль
+										.franchise-income__list-item-sum 540 000₽
+									li.franchise-income__list-item
+										.franchise-income__list-item-description Полная окупаемость
+										.franchise-income__list-item-sum 16 месяцев
+					.franchise-income__content-right
+						+img('lion-1.png')
+
+		section.franchise-benefits
+			.container
+				h2.franchise-benefits__title.title
+					| Что ты получишь по франшизе 
+					span.text-yellow кибер Pride 
+				.franchise-benefits__list
+					.franchise-benefits__list-item
+						.franchise-benefits__list-item-icon: +img('shield-icon-1.png')
+						.franchise-benefits__list-item-description Собственное производство <nobr>и сборка</nobr>
+					.franchise-benefits__list-item
+						.franchise-benefits__list-item-icon: +img('shield-icon-2.png')
+						.franchise-benefits__list-item-description Подбор <nobr>и подробный</nobr> анализ каждой локации
+					.franchise-benefits__list-item
+						.franchise-benefits__list-item-icon: +img('shield-icon-3.png')
+						.franchise-benefits__list-item-description Собственные медийные площадки
+					.franchise-benefits__list-item
+						.franchise-benefits__list-item-icon: +img('shield-icon-4.png')
+						.franchise-benefits__list-item-description Обучение собственника <nobr>и всего</nobr> персонала
+					.franchise-benefits__list-item
+						.franchise-benefits__list-item-icon: +img('shield-icon-5.png')
+						.franchise-benefits__list-item-description Персональный менеджер <nobr>и команда</nobr> специалистов
+					.franchise-benefits__list-item
+						.franchise-benefits__list-item-icon: +img('shield-icon-6.png')
+						.franchise-benefits__list-item-description Необходимые материалы для локального маркетинга
+					.franchise-benefits__list-item
+						.franchise-benefits__list-item-icon: +img('shield-icon-7.png')
+						.franchise-benefits__list-item-description CRM-система
+					.franchise-benefits__list-item
+						.franchise-benefits__list-item-icon: +img('shield-icon-8.png')
+						.franchise-benefits__list-item-description Дизайн-проект
+					.franchise-benefits__list-item
+						.franchise-benefits__list-item-icon: +img('shield-icon-9.png')
+						.franchise-benefits__list-item-description Бизнес-бук
+
+		section.franchise-join-us.bg-blue
+			.franchise-join-us__lion: +img('lion-2.png')
+			.container
+				.franchise-join-us__content
+					.franchise-join-us__content-left
+					.franchise-join-us__content-right
+						h1.franchise-join-us__title.title
+							| Присоединяйтесь к сети 
+							span.text-yellow кибер Pride 
+
+						.franchise-join-us__contacts
+							.franchise-join-us__contacts-description Узнайте подробные условия открытия кибер арены в своем городе
+							.franchise-join-us__contacts-phone +7 (123) 456-78-90
+							.franchise-join-us__contacts-mail: a(href="#").link info@kiberpride.com
+
+						.franchise-join-us__btn-box
+							+button('Получить консультацию')

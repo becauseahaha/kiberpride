@@ -1,0 +1,6 @@
+mixin video(data)
+	a(href=`${data.link}`).video(class=data.class)
+		.video__image 
+			+img(data.img)
+		.video__play
+			+button-play(true)

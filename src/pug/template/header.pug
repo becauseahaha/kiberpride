@@ -1,0 +1,16 @@
+mixin header(props)
+    header.header.js-header
+        .container
+            .header__inner 
+                nav.header__nav 
+                    .header__nav-wrapper.header__nav-wrapper-left
+                        a(href="#").header__nav-link О нас
+                        a(href="#").header__nav-link Новости
+                        a(href="#").header__nav-link Турниры
+                    .header__nav-wrapper.header__nav-wrapper-right
+                        a(href="#").header__nav-link Акции
+                        a(href="#").header__nav-link Франшиза
+                        a(href="#").header__nav-link Контакты 
+                
+                .header__logo
+                    +logo(true)

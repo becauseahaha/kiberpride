@@ -1,0 +1,33 @@
+.footer
+    padding: 60px 0
+    background-color: $baseBg
+    color: $gray
+    font-size: 1rem
+    letter-spacing: 0.02rem
+    &__inner
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__logo
+        .logo__text-wrapper
+            width: 158px
+            height: 20px
+    &__apps
+        &-link
+        &-image
+            width: 160px
+            height: 46px
+            &:first-child
+                margin-right: 10px
+    &__socials
+        display: flex
+        gap: 18px
+
+    +bp(1280px)
+        padding: 55px 0 47px
+        &__inner
+            flex-wrap: wrap
+        &__dev
+            flex: 1 0 100%
+            text-align: center
+            margin-top: 30px

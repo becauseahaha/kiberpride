@@ -1,0 +1,9 @@
+mixin logo(shield=false)
+	.logo
+		if shield
+			.logo__shield
+		.logo__text-wrapper
+			.logo__left
+				+img('logo-left.svg')
+			.logo__right
+				+img('logo-right.svg')

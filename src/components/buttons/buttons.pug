@@ -1,0 +1,21 @@
+mixin button(label)
+	.btn-shadow
+		button.btn&attributes(attributes)= label
+
+mixin button-play()
+	.btn-shadow
+		button.btn.btn-circle.btn-play&attributes(attributes)
+
+mixin button-next(noShadow = false)
+	if noShadow === false
+		.btn-shadow
+			button.btn.btn-next&attributes(attributes)
+	else
+		button.btn.btn-next&attributes(attributes)
+
+mixin button-prev(noShadow = false)
+	if noShadow === false
+		.btn-shadow
+			button.btn.btn-prev&attributes(attributes)
+	else
+		button.btn.btn-prev&attributes(attributes)
