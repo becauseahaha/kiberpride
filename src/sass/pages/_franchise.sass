@@ -11,6 +11,7 @@
         top: 0
         left: 0
         background:  lightgray 50% / cover no-repeat
+        background-image:url(../images/main-franchise.jpg)
         width: 100%
         height: 100%
         max-height: 100vh
@@ -43,11 +44,37 @@
         &-icon
             margin-right: 20px
 
-    +bp(1280px)
+    +bp(1440px)
         padding-bottom: 60px
         aspect-ratio: unset
+        &__content
+            padding-left: 35px
         &__title
             margin-bottom: 26px
+    +bp(1024px)
+        padding-top: 220px
+        position: relative
+        &__main-image
+            height: 100%
+    +bp(480px)
+        padding-top: 125px
+        padding-bottom: 100px
+        &__title
+            font-size: 1.5rem
+            margin-bottom: 35px
+        &__benefits
+            margin-bottom: 45px
+        &__benefits-item
+            margin-bottom: 25px
+            display: flex
+            line-height: 1.4
+            &-icon
+                width: 28px
+                height: 28px
+                margin-right: 10px
+        &__main-image
+            height: 100%
+            background-image:url(../images/main-franchise-xs.jpg)
 
 
 .franchise-video
@@ -75,7 +102,7 @@
         &-description
             font-size: 1.5rem
             letter-spacing: 0.045rem
-    +bp(1280px)
+    +bp(1440px)
         padding-bottom: 100px
         &__title
             margin-bottom: 40px
@@ -85,6 +112,36 @@
             &-number
                 font-size: 4.6875rem
                 letter-spacing: -0.14063rem
+    +bp(1024px)
+        padding-top: 80px
+        padding-bottom: 80px
+        &__stats
+            &-number
+                font-size: 3.44rem
+                letter-spacing: -0.10313rem
+            &-description
+                font-size: 1.125rem
+                letter-spacing: 0.03375rem
+    +bp(480px)
+        padding-top: 30px
+        padding-bottom: 50px
+        &__title
+            margin-bottom: 20px
+        &__stats
+            flex-wrap: wrap
+            gap: 15px
+            &-item
+                flex-basis: 100%
+                &:nth-child(1)
+                    flex: 1 1 auto
+                    text-align: right
+                    margin-right: 10px
+                &:nth-child(2)
+                    flex: 1 1 auto
+                    text-align: left
+                    margin-left: 10px
+                
+
 
 .franchise-advantages
     padding-top: 170px
@@ -92,6 +149,8 @@
     &__title
         text-align: center
         margin-bottom: 20px
+        .text-yellow
+            white-space: nowrap
     &__description
         max-width: 1150px
         margin-bottom: 100px
@@ -110,11 +169,32 @@
     &__btn-box
         display: flex
         justify-content: center
-    +bp(1280px)
+    +bp(1440px)
         padding-top: 100px
         padding-bottom: 100px
         &__advantages
             margin-bottom: 35px
+    +bp(1024px)
+        padding-top: 80px
+        padding-bottom: 80px
+        &__description
+            font-size: 1.125rem
+            letter-spacing: 0.03375rem
+            margin-bottom: 50px
+        &__advantages
+            grid-template-columns: repeat(2, 1fr)
+            margin-bottom: 30px
+    +bp(480px)
+        padding-top: 45px
+        padding-bottom: 45px
+        &__title
+            margin-bottom: 10px
+        &__description
+            margin-bottom: 30px
+        &__advantages
+            grid-template-columns: repeat(1, 1fr)
+            grid-template-rows: auto
+            gap: 10px
 
 .advantages
     &__item
@@ -142,13 +222,31 @@
     &__description
         line-height: 1.4
         letter-spacing: 0.03375rem
-    +bp(1280px)
+    +bp(1440px)
         &__item
             padding: 30px 30px 40px
         &__num
             margin-bottom: 69px
         &__title
             margin-bottom: 24px
+    +bp(1024px)
+        &__item
+            padding: 30px 30px 40px
+            font-size: 0.9375rem
+            letter-spacing: -0.01406rem
+        &__num
+            margin-bottom: 30px
+            font-size: 2.5rem
+            letter-spacing: 0.125rem
+        &__title
+            margin-bottom: 16px
+    +bp(480px)
+        &__item
+            padding: 25px 20px
+        &__num
+            font-size: 1.875rem
+            letter-spacing: 0.09375rem
+            line-height: 1.3
 
 
 .franchise-reviews
@@ -158,6 +256,8 @@
     &__title
         text-align: center
         margin-bottom: 84px
+        .text-yellow
+            white-space: nowrap
     &__swiper-wrapper 
         display: flex
         gap: 45px
@@ -183,7 +283,7 @@
     &__controls-right
         right: 0
 
-    +bp(1280px)
+    +bp(1440px)
         padding-top: 100px
         padding-bottom: 185px
         &__title
@@ -206,12 +306,28 @@
                 height: 50px
         &__controls-right
             transform: translate(10px, 35px)
+    +bp(1024px)
+        padding-top: 70px
+        padding-bottom: 160px
+        &__swiper-wrapper 
+            .video
+                flex-basis: 337px
+                height: 196px
+    +bp(480px)
+        padding-top: 30px
+        padding-bottom: 70px
+        &__swiper-wrapper 
+            gap: 10px
+        &__controls-left,
+        &__controls-right
+            display: none
 
 .franchise-income
     padding-top: 100px
     padding-bottom: 160px
     &__title
         margin-bottom: 40px
+        max-width: 800px 
     &__content
         display: flex
         &-left
@@ -261,7 +377,7 @@
             &-sum
                 flex: 0 0 auto
 
-    +bp(1280px)
+    +bp(1440px)
         padding-bottom: 110px
         &__content
             &-right
@@ -273,6 +389,56 @@
         &__list-wrapper 
             padding-left: 25px
             padding-right: 37px
+    +bp(1024px)
+        padding-bottom: 70px
+        padding-top: 80px
+        &__title
+            margin-bottom: 390px
+            max-width: 560px
+            text-align: center
+            margin-left: auto
+            margin-right: auto
+        &__content
+            flex-direction: column-reverse
+            &-right
+                flex-basis: 0px
+                img
+                    bottom: -280px
+                    left: 50%
+                    transform: translateX(-50%)
+                    width: 450px
+                    z-index: 0
+            &-left
+                max-width: 100% 
+                z-index: 1
+    +bp(480px)
+        padding-top: 35px
+        padding-bottom: 30px
+        &__title
+            margin-bottom: 235px
+            max-width: 290px
+        &__content
+            &-right
+                img
+                    width: 95%
+        &__list-wrapper 
+            padding: 45px 10px 33px 10px
+        &__list
+            font-size: 0.875rem
+            letter-spacing: 0.04375rem
+            &_offset
+                margin-left: 10px
+                margin-right: 10px
+            &-item
+                flex-direction: column
+                gap: 15px
+        &__summary
+            margin-top: 20px
+            padding: 30px 10px
+            .franchise-income__list
+                font-size: 0.875rem
+                letter-spacing: 0.04375rem
+
 
 .franchise-benefits
     padding-top: 155px
@@ -297,7 +463,7 @@
             font-size: 1.5rem
             line-height: 1.3
 
-    +bp(1280px)
+    +bp(1440px)
         &__title
             .text-yellow
                 white-space: nowrap
@@ -308,6 +474,30 @@
             &-description
                 font-size: 1.125rem
                 letter-spacing: 0.03375rem
+    +bp(1024px)
+        padding-top: 70px
+        padding-bottom: 70px
+        &__title
+            margin-bottom: 50px
+        &__list-item
+            &-icon
+                margin-bottom: 15px
+                img
+                    width: 62px
+                    height: 70px
+            &-description
+                font-size: 0.9375rem
+                letter-spacing: 0.02813rem
+    +bp(480px)
+        padding-top: 40px
+        &__title
+            margin-bottom: 40px
+        &__list
+            grid-template-columns: 100%
+            grid-template-rows: auto
+            padding-left: 40px
+            padding-right: 40px
+            row-gap: 40px
 
 
 .franchise-join-us
@@ -347,7 +537,7 @@
         &-mail
             margin-bottom: 47px
 
-    +bp(1280px)
+    +bp(1440px)
         padding-top: 135px
         padding-bottom: 66px
         &__lion
@@ -367,3 +557,42 @@
                 margin-bottom: 35px
             &-mail
                 margin-bottom: 42px
+    +bp(1024px)
+        padding-top: 440px
+        padding-bottom: 70px
+        &__content
+            // padding-right: 340px
+            z-index: 1
+        &__content-left
+            display: none
+        &__content-right
+            max-width: 560px
+            padding-left: 60px
+        &__lion
+            transform: translateX(-50%);
+            bottom: 450px
+            z-index: 0
+    +bp(480px)
+        padding-top: 210px
+        padding-bottom: 35px
+        &__lion
+            bottom: 210px
+            width: 95%
+        &__content
+            padding: 35px 15px
+        &__content-right
+            padding-left: 15px
+        &__contacts
+            font-size: 0.9375rem
+        &__contacts-title
+            margin-bottom: 25px
+        &__contacts-description
+            margin-bottom: 25px
+        &__contacts-phone
+            margin-bottom: 13px
+        &__contacts-mail
+            margin-bottom: 25px
+        .btn
+            padding-left: 20px
+            padding-right: 20px
+

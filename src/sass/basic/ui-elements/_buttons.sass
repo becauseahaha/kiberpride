@@ -4,6 +4,9 @@
 		filter: drop-shadow(3px 3px 0px white)
 	&:has(.btn:active)
 		filter: none
+	+bp(480px)
+		&:has(.btn-circle)
+			filter: drop-shadow(1px 1px 0px white)
 .btn
 	position: relative
 	cursor: pointer
@@ -17,12 +20,15 @@
 	text-transform: uppercase
 	padding: 22px 40px 30px
 	background: $orange
-	clip-path: path("M11.7143 0H316.286L328 60L0 70L11.7143 0Z")
+	clip-path: polygon(3% 0,97% 0%,100% 85%,0% 100%)
 	&:hover
 		background: $orange-hover
 	&:active
 		transform: translate(5px, 5px)
 		background: $orange-hover
+	+bp(480px)
+		font-size: 0.875rem
+		letter-spacing: 0.02625rem
 
 .btn-circle
 	clip-path: circle()
@@ -34,16 +40,23 @@
 		position: absolute
 		top: 50%
 		left: 50%
-		transform: translate(-15px, -15px)
+		transform: translate(-50%, -50%)
 		display: block
 		background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"%3E%3Cpath d="M9.58 4.18538C9.43047 4.07892 9.25453 4.01567 9.07144 4.00256C8.88835 3.98944 8.70519 4.02697 8.54202 4.11104C8.37884 4.19511 8.24195 4.32246 8.14635 4.47915C8.05075 4.63585 8.00011 4.81583 8 4.99938V24.9994C8.00011 25.1829 8.05075 25.3629 8.14635 25.5196C8.24195 25.6763 8.37884 25.8037 8.54202 25.8877C8.70519 25.9718 8.88835 26.0093 9.07144 25.9962C9.25453 25.9831 9.43047 25.9198 9.58 25.8134L23.58 15.8134C23.7096 15.7209 23.8153 15.5988 23.8882 15.4572C23.9611 15.3156 23.9991 15.1586 23.9991 14.9994C23.9991 14.8401 23.9611 14.6832 23.8882 14.5416C23.8153 14.4 23.7096 14.2779 23.58 14.1854L9.58 4.18538Z" fill="white"/%3E%3C/svg%3E')
+		background-size: contain
 		width: 30px
 		height: 30px
+	+bp(480px)
+		&::after
+			width: 21px
+			height: 21px
 
 .btn-next
 	padding: 0
 	clip-path: polygon(0px 5%, 99% 0px, 100% 100%, 0px 99%)
 	aspect-ratio: 1/1
+	width: 88px
+	height: 88px
 	&::after
 		content: ""
 		position: absolute
@@ -59,6 +72,8 @@
 	padding: 0
 	clip-path: polygon(0px 0px, 100% 1%, 100% 95%, 1% 100%)
 	aspect-ratio: 1/1
+	width: 88px
+	height: 88px
 	&::after
 		content: ""
 		position: absolute

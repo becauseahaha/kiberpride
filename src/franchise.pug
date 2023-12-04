@@ -9,7 +9,7 @@ block content
 
 	.franchise
 		section.franchise-header
-			.franchise-header__main-image(style="background-image:url(../images/main-franchise.jpg)")
+			.franchise-header__main-image
 			.container
 				.franchise-header__content
 					h1.franchise-header__title.title
@@ -20,13 +20,13 @@ block content
 					.franchise-header__benefits
 						.franchise-header__benefits-item
 							+img('icon-1.svg').franchise-header__benefits-item-icon   
-							| Эффективная бизнес-модель
+							| <span>Эффективная бизнес-модель</span>
 						.franchise-header__benefits-item
 							+img('icon-2.svg').franchise-header__benefits-item-icon  
-							| Раскачаем с 0 до 1 млн. выручки
+							| <span>Раскачаем с 0 до 1 млн. выручки</span>
 						.franchise-header__benefits-item
 							+img('icon-3.svg').franchise-header__benefits-item-icon  
-							| Сильное комьюнити из 119 партнера
+							| <span>Сильное комьюнити из 119 партнера</span>
 
 					.franchise-header__btn-box
 						+button('Получить консультацию')(class="franchise-header__btn")
@@ -117,11 +117,11 @@ block content
 
 		section.franchise-income.bg-blue
 			.container
+				h2.franchise-income__title.title
+					| Доход от франшизы 
+					span.text-yellow кибер Pride 
 				.franchise-income__content 
 					.franchise-income__content-left
-						h2.franchise-income__title.title
-							| Доход от франшизы 
-							span.text-yellow кибер Pride 
 						.franchise-income__list-wrapper 
 							ul.franchise-income__list.franchise-income__list_offset
 								li.franchise-income__list-item
